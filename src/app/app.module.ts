@@ -8,6 +8,7 @@ import { WidgetWeatherComponent } from './widget-weather/widget-weather.componen
 import { WidgetTeddyBearComponent } from './widget-teddy-bear/widget-teddy-bear.component';
 import { CopyrightComponent } from './copyright/copyright.component';
 import { WidgetDataSelectComponent } from './widget-data-select/widget-data-select.component';
+import { DataItemComponent } from './data-item/data-item.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { WidgetDataSelectComponent } from './widget-data-select/widget-data-sele
     WidgetWeatherComponent,
     WidgetTeddyBearComponent,
     CopyrightComponent,
-    WidgetDataSelectComponent
+    WidgetDataSelectComponent,
+    DataItemComponent
   ],
   imports: [
     BrowserModule

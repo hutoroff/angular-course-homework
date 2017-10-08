@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {Observable} from "rxjs/Observable";
 
 @Component({
   selector: 'app-widget-data-select',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./widget-data-select.component.css']
 })
 export class WidgetDataSelectComponent implements OnInit {
-  public pictureUrl: string = 'assets/images/1.jpg'
+  @Input()
+  public resorts$: Observable<Resort[]>;
+
+  public pictureUrl: string = 'assets/images/1.jpg';
 
   constructor() { }
 

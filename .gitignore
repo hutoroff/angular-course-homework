@@ -17,7 +17,7 @@
 .settings/
 *.sublime-workspace
 *.iml
-
+/home/hutoroff/dev/angular-course/angular-homework-spa/course-hw/home/hutoroff/dev/angular-course/angular-homework-spa/course-hw
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
