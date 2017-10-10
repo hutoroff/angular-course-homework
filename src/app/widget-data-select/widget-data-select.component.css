@@ -69,3 +69,7 @@ span.line {
 .scrollbar::-webkit-scrollbar-thumb {
   background-color:#fda660;
 }
+
+.img-responsive {
+  width: 250px;
+}

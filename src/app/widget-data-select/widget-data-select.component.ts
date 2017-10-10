@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Observable} from "rxjs/Observable";
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 @Component({
   selector: 'app-widget-data-select',
@@ -7,14 +6,31 @@ import {Observable} from "rxjs/Observable";
   styleUrls: ['./widget-data-select.component.css']
 })
 export class WidgetDataSelectComponent implements OnInit {
-  @Input()
-  public resorts$: Observable<Resort[]>;
 
-  public pictureUrl: string = 'assets/images/1.jpg';
+  @Input()
+  public resorts: Resort[];
+
+  @Output()
+  public selectedResort: EventEmitter<Resort> = new EventEmitter();
+
+  public sortOptions: string[] = ['Name','Address','Weather','Social'];
+
+  public selectedOption: string = this.sortOptions[0];
+  public selectedResortPhoto: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.emitResort(this.resorts[0]);
+  }
+
+  public setSortOption(option: string): void {
+    this.selectedOption = option;
+  }
+
+  public emitResort(resort: Resort): void {
+    this.selectedResort.emit(resort);
+    this.selectedResortPhoto = resort.img;
   }
 
 }

@@ -1,20 +1,18 @@
 <div class="app-root">
   <h1>{{title}}</h1>
-  <div class="elements">
-    <app-elements>
+  <div *ngIf="resorts$ | async as resorts">
+    <div class="elements">
       <div class="element-left">
-        <app-widget-data-select [resorts$]="resorts$"></app-widget-data-select>
+        <app-widget-data-select [resorts]="resorts" (selectedResort)="selectResort($event)"></app-widget-data-select>
       </div>
       <div class="element-right">
-        <app-element-big>
-          <div class="element-top">
-            <app-widget-weather></app-widget-weather>
-          </div>
-          <div class="element-bottom">
-            <app-widget-teddy-bear></app-widget-teddy-bear>
-          </div>
-        </app-element-big>
+        <div class="element-top">
+          <app-widget-weather [weather]="selectedResort.weather"></app-widget-weather>
+        </div>
+        <div class="element-bottom">
+          <app-widget-social [info]="selectedResort.social_info"></app-widget-social>
+        </div>
       </div>
-    </app-elements>
+    </div>
   </div>
 </div>

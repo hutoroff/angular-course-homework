@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WidgetTeddyBearComponent } from './widget-teddy-bear.component';
+import {WidgetSocialComponent} from "./widget-social.component";
 
-describe('WidgetTeddyBearComponent', () => {
-  let component: WidgetTeddyBearComponent;
-  let fixture: ComponentFixture<WidgetTeddyBearComponent>;
+describe('WidgetSocialComponent', () => {
+  let component: WidgetSocialComponent;
+  let fixture: ComponentFixture<WidgetSocialComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WidgetTeddyBearComponent ]
+      declarations: [ WidgetSocialComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WidgetTeddyBearComponent);
+    fixture = TestBed.createComponent(WidgetSocialComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

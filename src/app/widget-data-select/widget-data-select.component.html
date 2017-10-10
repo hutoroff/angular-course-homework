@@ -1,19 +1,21 @@
 <div>
-  <div class="element-bg-img"><img src="{{pictureUrl}}" alt="" class="img-responsive"> </div>
+  <div class="element-bg-img"><img src="{{selectedResortPhoto}}" alt="" class="img-responsive"> </div>
   <div class="element-left-bottom">
     <div class="ele-strip">
       <ul>
-        <li><a href="#">Hotel</a></li>
-        <li><a href="#">Fishing</a></li>
-        <li><a href="#">Tours</a></li>
-        <li class="anc-bor"><a href="#">Weather</a></li>
+        <li *ngFor="let option of sortOptions"><a href="#" (click)="setSortOption(option)">{{option}}</a></li>
       </ul>
     </div>
-    <div *ngIf="resorts$" class="village">
+    <div *ngIf="resorts" class="village">
       <h3>Righteous indignation & like</h3>
       <span class="line"> </span>
-      <div *ngFor="let resort of resorts$">
-        <app-data-item [phone]="resort.phone" [address]="resort.address" [pictureUrl]="resort.img"></app-data-item>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <div *ngFor="let resort of resorts | resortSort:selectedOption">
+            <app-data-item (click)="emitResort(resort)" [name]="resort.name" [phone]="resort.phone" [address]="resort.address" [pictureUrl]="resort.thumbImg"></app-data-item>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </div>

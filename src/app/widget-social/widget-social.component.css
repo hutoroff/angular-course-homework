@@ -41,3 +41,7 @@ span.w-line { /*repeated in widget-weater*/
   display: block;
   margin:0.73em auto 0.72em;
 }
+.img-responsive {
+  width: 105px;
+  height: 105px;
+}

@@ -10,4 +10,10 @@ import {resorts$} from "./data/index";
 export class AppComponent {
   public title: string = 'Hot Weather Widget';
   public resorts$: Observable<Resort[]> = resorts$;
+
+  public selectedResort: Resort;
+
+  public selectResort(resort: Resort):void {
+    this.selectedResort = resort;
+  }
 }

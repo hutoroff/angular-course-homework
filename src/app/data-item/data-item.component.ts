@@ -1,11 +1,11 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-data-item',
   templateUrl: './data-item.component.html',
   styleUrls: ['./data-item.component.css']
 })
-export class DataItemComponent implements OnInit {
+export class DataItemComponent {
 
   @Input()
   public phone: number;
@@ -16,9 +16,7 @@ export class DataItemComponent implements OnInit {
   @Input()
   public pictureUrl: string;
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input()
+  public name: string;
 
 }

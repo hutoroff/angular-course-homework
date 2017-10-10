@@ -1,6 +1,6 @@
 .activity-row {
   text-align: left;
-  margin-bottom:1em;
+  margin: 1em .3em;
 }
 .activity-desc {
   float: left;
@@ -28,13 +28,15 @@
 }
 .activity-img {
   float: right;
-  width: 50%;
+  width: 20%;
 }
 .activity-img ul li {
   display: inline-block;
 }
 .activity-img ul li img{
   border-radius:50px;
+  height: 60px;
+  width: 60px;
 }
 .clear{
   clear:both;
