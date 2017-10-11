@@ -7,7 +7,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noUnusedParameters": false,  //bug: angular #17131. Seems to be fixed in Angular 5.0
     "strict": true,
     "noStrictGenericChecks": true,
     "skipLibCheck": true,

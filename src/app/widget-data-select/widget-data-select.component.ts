@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-widget-data-select',
@@ -13,12 +13,12 @@ export class WidgetDataSelectComponent implements OnInit {
   @Output()
   public selectedResort: EventEmitter<Resort> = new EventEmitter();
 
-  public sortOptions: string[] = ['Name','Address','Weather','Social'];
+  public sortOptions: string[] = ['Name', 'Address', 'Weather', 'Social'];
 
   public selectedOption: string = this.sortOptions[0];
   public selectedResortPhoto: string;
 
-  ngOnInit() {
+  public ngOnInit () {
     this.emitResort(this.resorts[0]);
   }
 

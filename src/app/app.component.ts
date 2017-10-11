@@ -1,14 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import {resorts$} from "./data/index";
-import {ResortsService} from "./common/services/resorts.service";
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { resorts$ } from './data/index';
+import { ResortsService } from './common/services/resorts.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   public title: string = 'Hot Weather Widget';
   public resorts$: Observable<Resort[]> = resorts$;
 
@@ -20,7 +20,7 @@ export class AppComponent implements OnInit{
     this.resorts$ = this._resortsService.getResorts();
   }
 
-  public selectResort(resort: Resort):void {
+  public selectResort(resort: Resort): void {
     this.selectedResort = resort;
   }
 }

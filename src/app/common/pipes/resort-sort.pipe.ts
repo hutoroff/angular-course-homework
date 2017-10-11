@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ResortSortPipe implements PipeTransform {
 
-  transform(resorts: Resort[], sortBy: string): Resort[] {
+  public transform(resorts: Resort[], sortBy: string): Resort[] {
     switch (sortBy) {
       case 'Name':
         return sortByName(resorts);
@@ -21,21 +21,21 @@ export class ResortSortPipe implements PipeTransform {
 }
 
 function sortByName(resorts: Resort[]): Resort[] {
-    resorts.sort((el1:Resort, el2:Resort) => el1.name.localeCompare(el2.name));
+    resorts.sort((el1: Resort, el2: Resort) => el1.name.localeCompare(el2.name));
     return resorts;
 }
 
 function sortByAddress(resorts: Resort[]): Resort[] {
-  resorts.sort((el1:Resort, el2:Resort) => el1.address.localeCompare(el2.address));
+  resorts.sort((el1: Resort, el2: Resort) => el1.address.localeCompare(el2.address));
   return resorts;
 }
 
 function sortByTemperature(resorts: Resort[]): Resort[] {
-  resorts.sort((el1:Resort, el2:Resort) => el2.weather.temperature - el1.weather.temperature);
+  resorts.sort((el1: Resort, el2: Resort) => el2.weather.temperature - el1.weather.temperature);
   return resorts;
 }
 
 function sortByFollowers(resorts: Resort[]): Resort[] {
-  resorts.sort((el1:Resort, el2:Resort) => el2.social_info.followers - el1.social_info.followers);
+  resorts.sort((el1: Resort, el2: Resort) => el2.social_info.followers - el1.social_info.followers);
   return resorts;
 }
