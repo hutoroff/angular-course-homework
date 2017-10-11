@@ -7,6 +7,7 @@ import { WidgetSocialComponent } from './widget-social/widget-social.component';
 import { WidgetDataSelectComponent } from './widget-data-select/widget-data-select.component';
 import { DataItemComponent } from './data-item/data-item.component';
 import { ResortSortPipe } from './common/pipes/resort-sort.pipe';
+import {ResortsService} from "./common/services/resorts.service";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ResortSortPipe } from './common/pipes/resort-sort.pipe';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    ResortsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

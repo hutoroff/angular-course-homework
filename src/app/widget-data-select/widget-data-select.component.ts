@@ -18,8 +18,6 @@ export class WidgetDataSelectComponent implements OnInit {
   public selectedOption: string = this.sortOptions[0];
   public selectedResortPhoto: string;
 
-  constructor() { }
-
   ngOnInit() {
     this.emitResort(this.resorts[0]);
   }

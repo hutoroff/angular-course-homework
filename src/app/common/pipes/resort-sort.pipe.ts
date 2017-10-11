@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ResortSortPipe implements PipeTransform {
 
-  transform(resorts: Resort[], sortBy: string): any {
+  transform(resorts: Resort[], sortBy: string): Resort[] {
     switch (sortBy) {
       case 'Name':
         return sortByName(resorts);
